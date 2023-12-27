@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,200;1,500;1,700&family=Playfair+Display:wght@800&family=Rubik:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-family: "Rubik", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar Starts Here */
+
+nav {
+  background: rgb(255, 113, 113);
+  height: 60px;
+  width: 100%;
+  position: fixed;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 60px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  font-size: 1.5rem;
+  padding: 7px 13px;
+  margin: 0 25px;
+  color: black;
+}
+
+.checkbtn {
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.hamnurger-icon {
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 952px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1039px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at top,
+      rgb(255, 246, 174),
+      rgb(255, 182, 236)
+    );
+    top: -100%;
+    left: 0;
+    text-align: center;
+    transition: all 0.5s;
+    /* z-index: -1; */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    top: 60px;
+  }
+}
+/* Ṇavbar Ends Here */
+
+/* Hero Section Starts Here */
+
+.hero-pic {
+  background-image: url("/assets/hero-img.jpg");
+}
+
+.hero {
+  background: linear-gradient(
+    90deg,
+    rgb(255, 246, 174) 0%,
+    rgb(255, 182, 236) 100%
+  );
+  width: 100%;
+  display: flex;
+}
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+  height: 100%;
+}
+
+aside {
+  flex: 50%;
+}
+
+.hero-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 10rem 3rem;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.hero-content p {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.hero-btn {
+  background-color: rgb(248, 98, 98);
+  border: none;
+  color: white;
+  padding: 1rem 4rem;
+}
+
+.hero-image {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-pic {
+  background-image: url("/assets/hero-img.jpg");
+}
+
+@media (max-width: 968px) {
+  aside {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-pic {
+    height: 100vh;
+  }
+  .image-grid {
+    display: block;
+  }
+}
+/* Hero Section Ends Here  */
+
+/* Banner Starts Here */
+.banner {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 246, 174) 0%,
+    rgb(255, 182, 236) 100%
+  );
+}
+
+.banner-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.banner-images {
+  width: 50%;
+  height: 100%;
+  padding: 2rem;
+}
+.banner-content {
+  padding: 2rem;
+  padding-right: 2rem;
+  width: 50%;
+}
+.banner-content div {
+  background-color: rgb(255, 113, 113);
+  padding: 2rem;
+}
+.banner-content p {
+  text-transform: uppercase;
+}
+
+.banner-content h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.banner-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 1160px) {
+  .banner-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .banner-content {
+    width: 100%;
+    height: 100%;
+  }
+  .banner-images {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-row {
+  flex: 0 0 calc(50% - 10px);
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-01 {
+  background-image: url("/assets/img1.jpg");
+  margin-bottom: 0.5rem;
+}
+.image-02 {
+  background-image: url("/assets/img2.jpg");
+  margin-bottom: 0.5rem;
+}
+.image-03 {
+  background-image: url("/assets/img3.jpg");
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    flex: 0 0 100%;
+  }
+}
+@media only screen {
+  .image-03 {
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .image-03 {
+    height: 300px;
+  }
+}
+/* Banner Ends Here */
