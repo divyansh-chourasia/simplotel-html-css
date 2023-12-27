@@ -64,7 +64,7 @@ nav ul li a {
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: 1165px) {
   .checkbtn {
     display: block;
   }
